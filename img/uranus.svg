@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="480" height="480">
+<defs>
+<radialGradient id="body" cx="28%" cy="22%" r="85%"><stop offset="0%" stop-color="#bafaf0"/><stop offset="51%" stop-color="#64c6d1"/><stop offset="100%" stop-color="#377a9c"/></radialGradient>
+<radialGradient id="glow" cx="31%" cy="22%" r="80%"><stop offset="0" stop-color="#ffffff" stop-opacity=".36"/><stop offset=".48" stop-color="#ffffff" stop-opacity="0"/><stop offset="1" stop-color="#060e1b" stop-opacity=".46"/></radialGradient>
+<linearGradient id="ring" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0" stop-color="#bafaf0"/><stop offset=".53" stop-color="#64c6d1"/><stop offset="1" stop-color="#377a9c"/></linearGradient>
+<clipPath id="disk"><circle cx="240" cy="240" r="157"/></clipPath>
+</defs>
+<circle cx="240" cy="240" r="157" fill="url(#body)"/>
+<g clip-path="url(#disk)">
+<path d="M75 144 Q240 122 407 153" fill="none" stroke="#cbffff" stroke-width="23" opacity=".15"/>
+<path d="M75 190 Q240 168 407 199" fill="none" stroke="#cbffff" stroke-width="23" opacity=".15"/>
+<path d="M75 234 Q240 212 407 243" fill="none" stroke="#cbffff" stroke-width="14" opacity=".15"/>
+<path d="M75 280 Q240 258 407 289" fill="none" stroke="#cbffff" stroke-width="23" opacity=".15"/>
+<path d="M75 321 Q240 299 407 330" fill="none" stroke="#cbffff" stroke-width="23" opacity=".15"/>
+</g>
+<circle cx="240" cy="240" r="157" fill="url(#glow)"/>
+<circle cx="240" cy="240" r="157" fill="none" stroke="#fff" stroke-opacity=".06" stroke-width="1.5"/>
+</svg>

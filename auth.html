@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Вход и регистрация на сайте ОРБИТА — учебный атлас Солнечной системы.">
+  <meta name="theme-color" content="#0b1017"><title>Вход и регистрация — ОРБИТА</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/data.js"></script><script defer src="js/auth.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="header" id="top"><div class="container header__inner">
+    <a class="brand" href="index.html" aria-label="ОРБИТА — на главную"><span class="brand__mark" aria-hidden="true"><span></span></span><span>ОРБИТА<span class="brand__period">.</span></span></a>
+    <nav class="nav" id="mainNav" aria-label="Основная навигация">
+      <a class="nav__link" href="index.html">Главная</a><a class="nav__link" href="index.html#planetarium">Слайдер</a><a class="nav__link" href="index.html#catalog">Планеты</a><a class="nav__link" href="index.html#about">О проекте</a><a class="nav__link" href="index.html#footer">Контакты</a><a class="nav__link nav__mobile-auth auth-only" href="cabinet.html">Кабинет</a>
+    </nav>
+    <div class="header__actions"><a class="header__login guest-only" href="auth.html">Войти <span aria-hidden="true">↗</span></a><a class="header__user auth-only" href="cabinet.html"><span class="user-dot" aria-hidden="true"></span><span data-user-name></span><span class="header__user-label"> · Кабинет</span></a><button class="header__logout auth-only" type="button" data-logout>Выйти</button><button class="menu-toggle" id="menuBtn" type="button" aria-label="Открыть меню" aria-controls="mainNav" aria-expanded="false"><span></span><span></span><span></span></button></div>
+  </div></header>
+  <main id="main" class="auth-page"><div class="container auth-layout">
+    <div class="auth-showcase"><p class="eyebrow"><span class="status-dot"></span> ОРБИТА / ТВОЙ ЛИЧНЫЙ КОСМОС</p><h1>У каждого<br>открытия<br><em>есть начало.</em></h1><p>Создай профиль, сохраняй избранные планеты и возвращайся к ним в любой момент.</p><div class="auth-showcase__art"><div class="auth-showcase__orbit"></div><img src="img/saturn.svg" alt="Планета Сатурн с кольцами" width="360" height="360"></div><span class="auth-showcase__foot">KEEP EXPLORING <span aria-hidden="true">✳</span> STAY CURIOUS</span></div>
+    <section class="auth-panel" aria-labelledby="authTitle"><div class="auth-panel__intro"><p class="eyebrow">ЛИЧНЫЙ ПРОФИЛЬ / ORBITA</p><h2 id="authTitle">С возвращением!</h2><p id="authIntro">Войдите, чтобы продолжить исследование и открыть избранное.</p></div>
+      <div class="auth-tabs" role="tablist" aria-label="Тип формы"><button type="button" class="active" role="tab" aria-selected="true" aria-controls="loginForm" data-auth-tab="login">Вход</button><button type="button" role="tab" aria-selected="false" aria-controls="registerForm" data-auth-tab="register">Регистрация</button></div>
+      <form id="loginForm" class="auth-form" novalidate>
+        <div class="form-field"><label for="loginEmail">Ваш email <span>*</span></label><input type="email" id="loginEmail" name="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="loginEmailError"><p class="field-error" id="loginEmailError" aria-live="polite"></p></div>
+        <div class="form-field"><label for="loginPassword">Пароль <span>*</span></label><input type="password" id="loginPassword" name="password" autocomplete="current-password" placeholder="Введите пароль" required aria-describedby="loginPasswordError"><p class="field-error" id="loginPasswordError" aria-live="polite"></p></div>
+        <p class="form-message" data-form-message role="alert" hidden></p><button class="btn btn--primary btn--full" type="submit">Войти в аккаунт <span aria-hidden="true">↗</span></button><p class="auth-form__hint">Нет аккаунта? Откройте вкладку «Регистрация».</p>
+      </form>
+      <form id="registerForm" class="auth-form" novalidate hidden>
+        <div class="form-field"><label for="registerName">Имя <span>*</span></label><input type="text" id="registerName" name="name" autocomplete="name" minlength="2" maxlength="80" placeholder="Как вас зовут?" required aria-describedby="registerNameError"><p class="field-error" id="registerNameError" aria-live="polite"></p></div>
+        <div class="form-field"><label for="registerEmail">Email <span>*</span></label><input type="email" id="registerEmail" name="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="registerEmailError"><p class="field-error" id="registerEmailError" aria-live="polite"></p></div>
+        <div class="form-field"><label for="registerPassword">Пароль <span>*</span></label><input type="password" id="registerPassword" name="password" autocomplete="new-password" minlength="6" placeholder="Не менее 6 символов" required aria-describedby="registerPasswordError"><p class="field-error" id="registerPasswordError" aria-live="polite"></p></div>
+        <div class="form-field"><label for="registerConfirm">Повторите пароль <span>*</span></label><input type="password" id="registerConfirm" name="confirmPassword" autocomplete="new-password" placeholder="Повторите пароль" required aria-describedby="registerConfirmError"><p class="field-error" id="registerConfirmError" aria-live="polite"></p></div>
+        <div class="form-field form-field--check"><label class="checkbox-label"><input type="checkbox" id="registerAgree" name="agreement" required aria-describedby="registerAgreeError"><span>Согласен с <a href="#demoRules">условиями учебного проекта</a> и обработкой данных только в этом браузере.</span></label><p class="field-error" id="registerAgreeError" aria-live="polite"></p></div>
+        <p class="form-message" data-form-message role="alert" hidden></p><button class="btn btn--primary btn--full" type="submit">Создать аккаунт <span aria-hidden="true">↗</span></button>
+      </form>
+      <div class="auth-notice" id="demoRules"><span aria-hidden="true">ⓘ</span><p><strong>Учебный режим.</strong> Данные хранятся в localStorage вашего браузера. Не используйте реальный пароль: это демонстрация, а не защищённый онлайн-сервис.</p></div>
+    </section>
+  </div></main>
+  <footer class="simple-footer"><div class="container"><span>© 2026 ОРБИТА / УЧЕБНЫЙ ПРОЕКТ</span><a href="index.html">← Вернуться на главную</a></div></footer>
+</body>
+</html>

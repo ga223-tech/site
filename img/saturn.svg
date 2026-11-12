@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="480" height="480">
+<defs>
+<radialGradient id="body" cx="28%" cy="22%" r="85%"><stop offset="0%" stop-color="#f7e2a8"/><stop offset="51%" stop-color="#cca873"/><stop offset="100%" stop-color="#68523e"/></radialGradient>
+<radialGradient id="glow" cx="31%" cy="22%" r="80%"><stop offset="0" stop-color="#ffffff" stop-opacity=".36"/><stop offset=".48" stop-color="#ffffff" stop-opacity="0"/><stop offset="1" stop-color="#060e1b" stop-opacity=".46"/></radialGradient>
+<linearGradient id="ring" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0" stop-color="#f7e2a8"/><stop offset=".53" stop-color="#cca873"/><stop offset="1" stop-color="#68523e"/></linearGradient>
+<clipPath id="disk"><circle cx="240" cy="240" r="157"/></clipPath>
+</defs>
+<g transform="rotate(-24 240 240)" fill="none" opacity=".88">
+<ellipse cx="240" cy="240" rx="216" ry="73" stroke="#ab8868" stroke-width="30"/>
+<ellipse cx="240" cy="240" rx="214" ry="72" stroke="#ebd8ad" stroke-width="18"/>
+<ellipse cx="240" cy="240" rx="210" ry="71" stroke="#9d886f" stroke-width="5"/>
+<ellipse cx="240" cy="240" rx="195" ry="66" stroke="#ead0a2" stroke-width="5"/>
+</g>
+<circle cx="240" cy="240" r="157" fill="url(#body)"/>
+<g clip-path="url(#disk)">
+<path d="M75 117 Q240 104 404 121" fill="none" stroke="#f3d8a4" stroke-width="27" opacity=".52"/>
+<path d="M75 150 Q240 137 404 154" fill="none" stroke="#b58c66" stroke-width="30" opacity=".52"/>
+<path d="M75 187 Q240 174 404 191" fill="none" stroke="#e8cb97" stroke-width="27" opacity=".52"/>
+<path d="M75 224 Q240 211 404 228" fill="none" stroke="#bba27c" stroke-width="35" opacity=".52"/>
+<path d="M75 264 Q240 251 404 268" fill="none" stroke="#edd5a1" stroke-width="25" opacity=".52"/>
+<path d="M75 304 Q240 291 404 308" fill="none" stroke="#b99068" stroke-width="29" opacity=".52"/>
+<path d="M75 340 Q240 327 404 344" fill="none" stroke="#ead09f" stroke-width="30" opacity=".52"/>
+</g>
+<circle cx="240" cy="240" r="157" fill="url(#glow)"/>
+<circle cx="240" cy="240" r="157" fill="none" stroke="#fff" stroke-opacity=".06" stroke-width="1.5"/>
+<g transform="rotate(-24 240 240)" fill="none" stroke-linecap="round">
+<path d="M24 240 A216 73 0 0 0 456 240" stroke="#ac8f6d" stroke-width="28"/>
+<path d="M27 240 A213 70 0 0 0 453 240" stroke="#efdfb9" stroke-width="16"/>
+<path d="M31 240 A209 68 0 0 0 449 240" stroke="#9d886e" stroke-width="4"/>
+<path d="M42 240 A198 64 0 0 0 438 240" stroke="#fcf1d3" stroke-width="3"/>
+</g>
+</svg>

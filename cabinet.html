@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Личный кабинет на сайте ОРБИТА: профиль и избранные планеты.">
+  <meta name="theme-color" content="#0b1017"><title>Личный кабинет — ОРБИТА</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/data.js"></script><script defer src="js/auth.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="header" id="top"><div class="container header__inner">
+    <a class="brand" href="index.html" aria-label="ОРБИТА — на главную"><span class="brand__mark" aria-hidden="true"><span></span></span><span>ОРБИТА<span class="brand__period">.</span></span></a>
+    <nav class="nav" id="mainNav" aria-label="Основная навигация"><a class="nav__link" href="index.html">Главная</a><a class="nav__link" href="index.html#planetarium">Слайдер</a><a class="nav__link" href="index.html#catalog">Планеты</a><a class="nav__link" href="index.html#about">О проекте</a><a class="nav__link" href="index.html#footer">Контакты</a><a class="nav__link nav__mobile-auth auth-only" href="cabinet.html">Кабинет</a></nav>
+    <div class="header__actions"><a class="header__login guest-only" href="auth.html">Войти <span aria-hidden="true">↗</span></a><a class="header__user auth-only" href="cabinet.html"><span class="user-dot" aria-hidden="true"></span><span data-user-name></span><span class="header__user-label"> · Кабинет</span></a><button class="header__logout auth-only" type="button" data-logout>Выйти</button><button class="menu-toggle" id="menuBtn" type="button" aria-label="Открыть меню" aria-controls="mainNav" aria-expanded="false"><span></span><span></span><span></span></button></div>
+  </div></header>
+  <main id="main" class="cabinet-page"><div class="container">
+    <div id="cabinetDenied" class="access-denied" hidden><span class="access-denied__symbol" aria-hidden="true">✳</span><p class="eyebrow">ДОСТУП / ТОЛЬКО ДЛЯ ИССЛЕДОВАТЕЛЕЙ</p><h1>Сначала<br><em>представимся?</em></h1><p>Личный кабинет доступен после входа. Зарегистрируйтесь или войдите в существующий аккаунт.</p><a class="btn btn--primary" href="auth.html">Перейти ко входу <span aria-hidden="true">↗</span></a><a class="access-denied__back" href="index.html">← На главную</a></div>
+    <div id="cabinetContent" hidden>
+      <div class="cabinet-heading"><div><p class="eyebrow section-heading__eyebrow">ЛИЧНАЯ СТАНЦИЯ / МОЙ ПРОФИЛЬ</p><h1>Твоя <em>орбита.</em></h1><p>Место для любимых планет и личных открытий.</p></div><a class="btn btn--outline" href="index.html#catalog">← К атласу планет</a></div>
+      <div class="profile-card"><div class="profile-card__identity"><div class="profile-card__avatar" id="avatarInitial" aria-hidden="true">?</div><div><span class="eyebrow muted">ИССЛЕДОВАТЕЛЬ ОРБИТЫ</span><h2 id="profileName"></h2><p id="profileEmail"></p></div></div><div class="profile-card__meta"><span class="eyebrow muted">В КОМАНДЕ С</span><strong id="profileDate"></strong></div><button class="btn btn--subtle" type="button" data-logout>Выйти <span aria-hidden="true">↗</span></button></div>
+      <section class="cabinet-favorites" aria-labelledby="favoritesHeading"><div class="cabinet-favorites__heading"><div><p class="eyebrow">МОЯ КОЛЛЕКЦИЯ</p><h2 id="favoritesHeading">Избранное <span id="favoritesCount">0</span></h2></div><a class="text-link" href="index.html#catalog">Добавить планеты <span aria-hidden="true">↗</span></a></div><div class="favorites-grid" id="cabinetFavorites"></div><div class="empty-favorites" id="cabinetEmpty" hidden><span aria-hidden="true">♡</span><h3>Здесь пока тихо...</h3><p>Найдите интересную планету в каталоге и нажмите на сердечко.</p><a class="btn btn--primary" href="index.html#catalog">Исследовать каталог <span aria-hidden="true">↗</span></a></div></section>
+      <div class="cabinet-tip"><span aria-hidden="true">✳</span><p>Маленькая подсказка: ваше избранное сохраняется в этом браузере и доступно после повторного входа.</p></div>
+    </div>
+  </div></main>
+  <footer class="simple-footer"><div class="container"><span>© 2026 ОРБИТА / УЧЕБНЫЙ ПРОЕКТ</span><a href="index.html">← На главную</a></div></footer>
+</body>
+</html>
